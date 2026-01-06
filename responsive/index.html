@@ -1,247 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-            <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>Join Our Community</title>
-                        <style>
-                                    * {
-                                                    margin: 0;
-                                                                padding: 0;
-                                                                            box-sizing: border-box;
-                                    }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Community</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-                                            body {
-                                                            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-                                                                        background: linear-gradient(135deg, #e8f0f2 0%, #d4e4e8 100%);
-                                                                                    min-height: 100vh;
-                                                                                                display: flex;
-                                                                                                            align-items: center;
-                                                                                                                        justify-content: center;
-                                                                                                                                    padding: 20px;
-                                                                                                                                                line-height: 1.6;
-                                            }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #e8f0f2 0%, #d4e4e8 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            line-height: 1.6;
+        }
 
-                                                    .card {
-                                                                    background: white;
-                                                                                border-radius: 12px;
-                                                                                            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-                                                                                                        max-width: 500px;
-                                                                                                                    width: 100%;
-                                                                                                                                overflow: hidden;
-                                                    }
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            max-width: 450px;
+            width: 100%;
+            overflow: hidden;
+            margin: 0 auto;
+        }
 
-                                                            .card-header {
-                                                                            padding: 32px 28px 28px;
-                                                            }
+        .card-header {
+            padding: 28px 24px 24px;
+        }
 
-                                                                    .card-title {
-                                                                                    color: #2ba9a4;
-                                                                                                font-size: 1.75rem;
-                                                                                                            font-weight: 600;
-                                                                                                                        margin-bottom: 16px;
-                                                                    }
+        .card-title {
+            color: #2ba9a4;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
 
-                                                                            .guarantee {
-                                                                                            color: #a8c744;
-                                                                                                        font-size: 1.05rem;
-                                                                                                                    font-weight: 600;
-                                                                                                                                margin-bottom: 14px;
-                                                                            }
+        .guarantee {
+            color: #a8c744;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
 
-                                                                                    .description {
-                                                                                                    color: #a0adb8;
-                                                                                                                font-size: 0.95rem;
-                                                                                                                            line-height: 1.7;
-                                                                                    }
+        .description {
+            color: #a0adb8;
+            font-size: 0.875rem;
+            line-height: 1.65;
+        }
 
-                                                                                            .card-body {
-                                                                                                            background: #4abdbd;
-                                                                                                                        padding: 32px 28px;
-                                                                                                                                    color: white;
-                                                                                            }
+        .card-body {
+            background: #2ba9a4;
+            padding: 28px 24px;
+            color: white;
+        }
 
-                                                                                                    /* Mobile-first layout */
-                                                                                                            .content-wrapper {
-                                                                                                                            display: flex;
-                                                                                                                                        flex-direction: column;
-                                                                                                                                                    gap: 32px;
-                                                                                                            }
+        /* Mobile-first layout */
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
 
-                                                                                                                    .subscription-section h2,
-                                                                                                                            .features-section h2 {
-                                                                                                                                            font-size: 1.5rem;
-                                                                                                                                                        font-weight: 600;
-                                                                                                                                                                    margin-bottom: 20px;
-                                                                                                                            }
+        .subscription-section h2,
+        .features-section h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
 
-                                                                                                                                    .price-container {
-                                                                                                                                                    display: flex;
-                                                                                                                                                                align-items: baseline;
-                                                                                                                                                                            gap: 10px;
-                                                                                                                                                                                        margin-bottom: 12px;
-                                                                                                                                    }
+        .price-container {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
 
-                                                                                                                                            .price {
-                                                                                                                                                            font-size: 3rem;
-                                                                                                                                                                        font-weight: 700;
-                                                                                                                                            }
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
 
-                                                                                                                                                    .period {
-                                                                                                                                                                    color: rgba(255, 255, 255, 0.8);
-                                                                                                                                                                                font-size: 1rem;
-                                                                                                                                                    }
+        .period {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 0.95rem;
+        }
 
-                                                                                                                                                            .value-prop {
-                                                                                                                                                                            margin-bottom: 24px;
-                                                                                                                                                                                        font-size: 1rem;
-                                                                                                                                                            }
+        .value-prop {
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
 
-                                                                                                                                                                    .signup-button {
-                                                                                                                                                                                    width: 100%;
-                                                                                                                                                                                                background: #a8c744;
-                                                                                                                                                                                                            color: white;
-                                                                                                                                                                                                                        border: none;
-                                                                                                                                                                                                                                    padding: 16px 32px;
-                                                                                                                                                                                                                                                font-size: 1.05rem;
-                                                                                                                                                                                                                                                            font-weight: 600;
-                                                                                                                                                                                                                                                                        border-radius: 8px;
-                                                                                                                                                                                                                                                                                    cursor: pointer;
-                                                                                                                                                                                                                                                                                                transition: all 0.3s ease;
-                                                                                                                                                                                                                                                                                                            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-                                                                                                                                                                    }
+        .signup-button {
+            width: 100%;
+            background: #a8c744;
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
 
-                                                                                                                                                                            .signup-button:hover {
-                                                                                                                                                                                            background: #97b334;
-                                                                                                                                                                                                        transform: translateY(-2px);
-                                                                                                                                                                                                                    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-                                                                                                                                                                            }
+        .signup-button:hover {
+            background: #97b334;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
 
-                                                                                                                                                                                    .signup-button:focus {
-                                                                                                                                                                                                    outline: 3px solid rgba(168, 199, 68, 0.5);
-                                                                                                                                                                                                                outline-offset: 2px;
-                                                                                                                                                                                    }
+        .signup-button:focus {
+            outline: 3px solid rgba(168, 199, 68, 0.5);
+            outline-offset: 2px;
+        }
 
-                                                                                                                                                                                            .signup-button:active {
-                                                                                                                                                                                                            transform: translateY(0);
-                                                                                                                                                                                            }
+        .signup-button:active {
+            transform: translateY(0);
+        }
 
-                                                                                                                                                                                                    .features-list {
-                                                                                                                                                                                                                    list-style: none;
-                                                                                                                                                                                                    }
+        .features-list {
+            list-style: none;
+        }
 
-                                                                                                                                                                                                            .features-list li {
-                                                                                                                                                                                                                            padding: 6px 0;
-                                                                                                                                                                                                                                        font-size: 0.95rem;
-                                                                                                                                                                                                                                                    color: rgba(255, 255, 255, 0.95);
-                                                                                                                                                                                                            }
+        .features-list li {
+            padding: 4px 0;
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.95);
+        }
 
-                                                                                                                                                                                                                    /* Desktop layout - side by side */
-                                                                                                                                                                                                                            @media (min-width: 768px) {
-                                                                                                                                                                                                                                            .card {
-                                                                                                                                                                                                                                                                max-width: 650px;
-                                                                                                                                                                                                                                            }
+        /* Desktop layout - side by side */
+        @media (min-width: 768px) {
+            .card {
+                max-width: 650px;
+            }
 
-                                                                                                                                                                                                                                                        .card-header {
-                                                                                                                                                                                                                                                                            padding: 36px 32px 32px;
-                                                                                                                                                                                                                                                        }
+            .card-header {
+                padding: 36px 32px 32px;
+            }
 
-                                                                                                                                                                                                                                                                    .content-wrapper {
-                                                                                                                                                                                                                                                                                        flex-direction: row;
-                                                                                                                                                                                                                                                                                                        gap: 0;
-                                                                                                                                                                                                                                                                    }
+            .content-wrapper {
+                flex-direction: row;
+                gap: 0;
+            }
 
-                                                                                                                                                                                                                                                                                .subscription-section {
-                                                                                                                                                                                                                                                                                                    flex: 1;
-                                                                                                                                                                                                                                                                                                                    padding-right: 28px;
-                                                                                                                                                                                                                                                                                                                                    border-right: 1px solid rgba(255, 255, 255, 0.2);
-                                                                                                                                                                                                                                                                                }
+            .subscription-section {
+                flex: 1;
+                padding-right: 28px;
+                border-right: 1px solid rgba(255, 255, 255, 0.2);
+            }
 
-                                                                                                                                                                                                                                                                                            .features-section {
-                                                                                                                                                                                                                                                                                                                flex: 1;
-                                                                                                                                                                                                                                                                                                                                padding-left: 28px;
-                                                                                                                                                                                                                                                                                            }
+            .features-section {
+                flex: 1;
+                padding-left: 28px;
+            }
 
-                                                                                                                                                                                                                                                                                                        .card-title {
-                                                                                                                                                                                                                                                                                                                            font-size: 1.85rem;
-                                                                                                                                                                                                                                                                                                        }
+            .card-title {
+                font-size: 1.85rem;
+            }
 
-                                                                                                                                                                                                                                                                                                                    .price {
-                                                                                                                                                                                                                                                                                                                                        font-size: 2.75rem;
-                                                                                                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                                                                                                }
+            .price {
+                font-size: 2.75rem;
+            }
+        }
 
-                                                                                                                                                                                                                                                                                                                        @media (min-width: 1024px) {
-                                                                                                                                                                                                                                                                                                                                        .card {
-                                                                                                                                                                                                                                                                                                                                                            max-width: 700px;
-                                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                                                                                                                </style>
-                                                                                                                                                                                                                                                                                                                            </head>
-                                                                                                                                                                                                                                                                                                                            <body>
-                                                                                                                                                                                                                                                                                                                                    <article class="card">
-                                                                                                                                                                                                                                                                                                                                                <header class="card-header">
-                                                                                                                                                                                                                                                                                                                                                                <h1 class="card-title">Join our community</h1>
-                                                                                                                                                                                                                                                                                                                                                                            <p class="guarantee">30-day, hassle-free money back guarantee</p>
-                                                                                                                                                                                                                                                                                                                                                                                        <p class="description">Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills.</p>
-                                                                                                                                                                                                                                                                                                                                                </header>
+        @media (min-width: 1024px) {
+            .card {
+                max-width: 700px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <article class="card">
+        <header class="card-header">
+            <h1 class="card-title">Join our community</h1>
+            <p class="guarantee">30-day, hassle-free money back guarantee</p>
+            <p class="description">Gain access to our full library of tutorials along with expert code reviews. Perfect for any developers who are serious about honing their skills.</p>
+        </header>
 
-                                                                                                                                                                                                                                                                                                                                                        <div class="card-body">
-                                                                                                                                                                                                                                                                                                                                                                        <div class="content-wrapper">
-                                                                                                                                                                                                                                                                                                                                                                                            <section class="subscription-section">
-                                                                                                                                                                                                                                                                                                                                                                                                                    <h2>Monthly Subscription</h2>
-                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="price-container">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <span class="price">$29</span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <span class="period">per month</span>
-                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                            <p class="value-prop">Full access for less than $1 a day</p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <button class="signup-button" aria-label="Sign up for monthly subscription">Sign Up</button>
-                                                                                                                                                                                                                                                                                                                                                                                                                                    </section>
+        <div class="card-body">
+            <div class="content-wrapper">
+                <section class="subscription-section">
+                    <h2>Monthly Subscription</h2>
+                    <div class="price-container">
+                        <span class="price">$29</span>
+                        <span class="period">per month</span>
+                    </div>
+                    <p class="value-prop">Full access for less than $1 a day</p>
+                    <button class="signup-button" aria-label="Sign up for monthly subscription">Sign Up</button>
+                </section>
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                    <section class="features-section">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <h2>Why Us</h2>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <ul class="features-list">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li>Tutorials by industry experts</li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li>Peer &amp; expert code review</li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li>Coding exercises</li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li>Access to our GitHub repos</li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li>Community forum</li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <li>Flashcard decks</li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li>New videos every week</li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </ul>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </section>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </article>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </body>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </html>
-                                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                                }
-                                                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                                        }
-                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                            }
-                                                                                                                                                                                                            }
-                                                                                                                                                                                                    }
-                                                                                                                                                                                            }
-                                                                                                                                                                                    }
-                                                                                                                                                                            }
-                                                                                                                                                                    }
-                                                                                                                                                            }
-                                                                                                                                                    }
-                                                                                                                                            }
-                                                                                                                                    }
-                                                                                                                            }
-                                                                                                            }
-                                                                                            }
-                                                                                    }
-                                                                            }
-                                                                    }
-                                                            }
-                                                    }
-                                            }
-                                    }
+                <section class="features-section">
+                    <h2>Why Us</h2>
+                    <ul class="features-list">
+                        <li>Tutorials by industry experts</li>
+                        <li>Peer &amp; expert code review</li>
+                        <li>Coding exercises</li>
+                        <li>Access to our GitHub repos</li>
+                        <li>Community forum</li>
+                        <li>Flashcard decks</li>
+                        <li>New videos every week</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </article>
+</body>
+</html>
